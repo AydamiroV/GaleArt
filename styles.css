@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+body {
+	margin: 0;
+	font-family: "Pacifico", cursive;
+  	background: #ffcba4;
+}
+/*Navigation starts here*/
+header {
+	background: #ffcba4;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.menuBar {
+	width: 80%;
+	margin: 0 auto;
+}
+.logo {
+	width: 70px;
+	height: 70px;
+	float: left;
+}
+nav {
+	float: left;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 23px;
+	position: relative;
+
+}
+nav > ul > li > a{
+	
+	color: #782b1c;
+	font-size: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+nav > ul > li > a:hover{
+	color: #000;
+}
+nav > ul > li > a::before{
+	content: "";
+	display: block;
+	background-color: #444;
+	height: 5px;
+	
+	width: 0%;
+	top:0;
+	position: absolute;
+	transition: all ease-in-out 200ms;
+
+}
+nav > ul > li > a:hover::before{
+	width: 100%;
+}
+/*Navigation ends here*/
+.orderForm {
+	font-family: "Times New Roman", Times, serif;
+}
+#expAndCvv {
+	display:inline-block;
+}
+/* Credit card selector*/
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.visa{background-image:url(http://i.imgur.com/lXzJ1eB.png);}
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
+/* change the opacity when either one is chosen*/ 
+.cc-selector input:active +.drinkcard-cc{opacity: .5;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:40px;height:40px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+/* Extras */
+a:visited{color:#888}
+a{color:#999;text-decoration:none;}
+p{margin-bottom:.3em;}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Galeart</title>
+ <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+ <body>
+  <header class = "clearfix">
+   <div class = "menuBar"> 
+   	<img src = "images/logo.jpeg" alt = "logo" class = "logo">
+	<nav> 
+	 <ul>
+ 	  <li> <a href = "index.html"> Home </a> </li>
+ 	  <li> <a href = "#"> About </a> </li>
+ 	  <li> <a href = "#"> Pricing </a> </li>
+ 	  <li> <a href = "placeorder.html"> Place an order </a> </li>
+ 	  <li> <a href = "#"> Contact </a> </li>
+ 	 </ul>
+ 	</nav>
+   </div>
+  </header>
+
+  <form class = "orderForm">
+  	<label for "firstname"> First name</label> <br>
+  	<input = "text" placeholder= "Your first name" name ="firstname"> <br>
+  	<label for "lastname"> Last name</label> <br>
+  	<input = "text" placeholder= "Your last name" name ="lastname"> <br>
+  	<label for "e-mail"> E-mail address</label> <br>
+  	<input = "text" name ="e-mail"> <br>
+  	<h3> PAYMENT </h3>
+  	<p style = "font-size: 14px;"> Choose credit card type</p>
+   	<div class="cc-selector">
+     <input id="visa" type="radio" name="credit-card" value="visa" />
+     <label class="drinkcard-cc visa" for="visa"></label>
+     <input id="mastercard" type="radio" name="credit-card" value="mastercard" />
+     <label class="drinkcard-cc mastercard"for="mastercard"></label>
+    </div>
+  	<label for "cardholder"> Cardholder's name </label><br>
+  	<input = "text" name ="cardholder">	<br>
+  	<label for "cardnumber"> Card number</label><br>
+  	<input = "text" name ="cardNumber" maxlength="16"><br>
+  	<div id="expAndCvv"> 
+  	 <label for "expDate"> Expiration date </label><br>
+  	 <input type = "month" name ="expDate" style = "max-width: 100%;" min = "2019-07" max = "2029-07">
+  	 <label for "cvv"> Cvv</label>
+  	 <input = "text" name ="cvv" maxlength = "3" style = "width: 30px;">
+  	 <br><br>
+  	 <input type = "submit" value = "Submit">
+  	</div>
+  	<br><br>
+  	<h3> BILLING ADDRESS </h3>
+  	<label for "fullname">Full name</label><br>
+  	<input = "text" name = "full name">
+  	<label for 
+  	<br>
+  </form>
+</body>
+</html>
