@@ -22,14 +22,14 @@
    </div>
   </header>
 
-<div class="contact">
+<div class="contact_us">
     <h3>Send an email</h3>
-    <form action="/myaction" method="post">
+    <form>
         <div id = "contact">
         <label for "firstname"> Full name</label> <br>
-        <input = "text" placeholder = "Enter your full name" name ="fullname" size = "35"> <br>
+        <input = "text" placeholder = "Enter your full name" id ="fullname" size = "35"> <br>
         <label for "e-mail"> E-mail address</label> <br>
-        <input = "text" placeholder = "Enter your email" name ="e-mail" size = "35"> <br>
+        <input = "text" placeholder = "Enter your email" id ="email" size = "35"> <br>
 
             <label for="message">Message:</label><br>
             <textarea id="message" placeholder="What's on your mind?" style = "height: 350px; width: 257px;"></textarea>
@@ -40,5 +40,22 @@
     </form>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $('form').on('submit', (e)) => {
+        e.preventDefault();
+        //grab the values from the submitted form
+        const email = $('#email'.val().trim());
+        const name = $('#fullname'.val().trim());
+        const msg = $('#message'.val().trim());
+
+        const data = {email,name, msg};
+    };
+    $.post('/email', data,function(){
+        console.log('Server received the data');
+    });
+
+</script>
 </body>
 </html>
